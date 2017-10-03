@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        <div id="success" class="alert alert-success" {{#if noMessage}}hidden{{/if}}>
+            {{ successMsg }}
+        </div>
+    </div>
+</div>
+
+{{# each pins }}
+   
+        {{# each this }}
+            <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+                <div class="grid-item">
+                    <img src="{{ this.url }}" alt="..." class="img-responsive">
+                    <div class="caption">
+                        <p class="description">{{ this.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+   
+{{/each}}
